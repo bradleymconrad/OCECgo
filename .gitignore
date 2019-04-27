@@ -1,0 +1,19 @@
+# Windows default autosave extension
+*.asv
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Matlab code generation folders
+codegen/
+
+# Sphinx support folders
+_build
+
+# Sphinx make file
+make.bat
+MakeFile
