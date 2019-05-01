@@ -14,7 +14,7 @@ axes(pnt2, 'Units', 'pixels', 'Position', [0 0 320 285], 'XLim', [0 320], 'YLim'
 % Create text file selection
 str = 'a) Select .txt data file:';
 text(gca, 10, 245, str, 'FontSize', 12, 'HorizontalAlignment', 'left', 'verticalalignment', 'middle');
-uicontrol(pnt2, 'Style', 'pushbutton', 'Position', [175 231 80 25], 'String', 'Browse...', 'FontSize', 10, 'callback', {@Callback_LoadTextData h})
+uicontrol(pnt2, 'Style', 'pushbutton', 'Position', [175 231 80 25], 'String', 'Browse...', 'FontSize', 10, 'callback', {@Callback_LoadTextData h []})
 uicontrol(pnt2, 'Style', 'text', 'Position', [10 200 300 20], 'string', '.txt data file not selected', 'FontSize', 10, 'HorizontalAlignment', 'center', 'tag', 'Dat_TxtFile', 'horizontalalignment', 'center', 'Enable', 'on')
 
 % Create tag selection
@@ -232,7 +232,7 @@ OCECgo_TabSupport_Copyright(pnt1);
 
 end
 
-function Callback_LoadTextData(~, ~, h)
+function Callback_LoadTextData(~, ~, h, source_file)
 % This callback function requests that the user selects a Sunset .txt
 % results file and then parses all available data.
 
@@ -240,9 +240,15 @@ function Callback_LoadTextData(~, ~, h)
 set(findobj(allchild(h), 'tag', 'Dat_TxtFile'), 'Tooltip', '', ...
     'string', '.txt data file not selected');
 
-% Allow user to select file
+% Allow user to select file (if not defined in function request)
 defname = fullfile(h.UserData.folder_load, '*.txt');
-[file, fold] = uigetfile('*.txt', 'Select data text file', defname);
+if isempty(source_file)
+    [file, fold] = uigetfile('*.txt', 'Select data text file', defname);
+else % Parse input file
+    [fold, file, ext] = fileparts(source_file);
+    fold = strcat(fold, filesep);
+    file = strcat(file, ext);
+end
 h.UserData.folder_load = fold;
 
 % Initialized analysis metadata
