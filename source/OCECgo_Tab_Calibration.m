@@ -570,7 +570,7 @@ function Callback_CalibrationImport(~, ~, h, xlsfile)
 
 % Get file location
 if isempty(xlsfile)
-    [file, fold] = uigetfile('*.xlsx', 'Select / create export file', fullfile(h.UserData.folder_load, '*.xlsx'));
+    [file, fold] = uigetfile('*.xlsx', 'Select import file', fullfile(h.UserData.folder_load, '*.xlsx'));
     h.UserData.folder_load = fold;
     xlsfile = fullfile(fold, file);
 end
