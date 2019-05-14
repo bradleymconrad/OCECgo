@@ -249,7 +249,14 @@ else % Parse input file
     fold = strcat(fold, filesep);
     file = strcat(file, ext);
 end
-h.UserData.folder_load = fold;
+
+% Check for good data
+if ~file
+    uiwait(msgbox('File not selected! Try again.', 'Error', 'error', 'Modal'))
+    error('OCECgo:Analyze:FileNotSelected', 'File not selected! Try again.')
+else
+    h.UserData.folder_load = fold;
+end
 
 % Initialized analysis metadata
 info.tags = {};
@@ -403,7 +410,7 @@ switch get(get(findobj(allchild(h), 'tag', 'Dat_Split_Proc'), 'selectedobject'),
         % Update AVEC plot
         Callback_BumpValues([], [], h, 11)
         
-    case 'Sunset labs'
+    case 'Manufacturer'
         selected = zeros(12, 1);
         
         % Update AVEC plot

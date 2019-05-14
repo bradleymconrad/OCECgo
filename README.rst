@@ -3,10 +3,10 @@
   :alt: Documentation Status
 
 ########################################################
-OCECgo: A MatLab Tool for the Sunset Model 4 Instrument
+OCECgo: A MATLAB Tool for the Sunset Model 4 Instrument
 ########################################################
 
-*OCECgo* is a MatLab-based software tool for the quantification of uncertainties in the calibration and data analysis of the Sunset Laboratory Model 4 semi-continuous thermal-optical organic/elemental carbon analyzer.
+*OCECgo* is a MATLAB-based software tool for the quantification of uncertainties in the calibration and data analysis of the Sunset Laboratory Model 4 semi-continuous thermal-optical organic/elemental carbon analyzer.
 
 ********
 Features

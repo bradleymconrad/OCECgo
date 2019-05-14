@@ -166,10 +166,10 @@ To compute the NDIR baseline within the *OCECgo* algorithm, two additional steps
 
   2. Cubic interpolation of the convex hull vertices is performed to obtain the NDIR correction at all instances in time.
 
-MatLab Code
+MATLAB Code
 -----------
 
-Shown below is example MatLab code to compute the NDIR baseline of the time-series :code:`x` using the convex hull technique.
+Shown below is example MATLAB code to compute the NDIR baseline of the time-series :code:`x` using the convex hull technique.
 
 .. code-block:: matlab
 

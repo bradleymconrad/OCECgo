@@ -1,5 +1,5 @@
 ########################################################
-OCECgo: A MatLab Tool for the Sunset Model 4 Instrument
+OCECgo: A MATLAB Tool for the Sunset Model 4 Instrument
 ########################################################
 
 .. image:: images/Logo_OCECgo.png
@@ -9,7 +9,7 @@ OCECgo: A MatLab Tool for the Sunset Model 4 Instrument
 
 ---------------------
 
-*OCECgo* is a MatLab-based software tool for the quantification of uncertainties in the calibration and data analysis of the Sunset Laboratory Model 4 semi-continuous thermal-optical organic/elemental carbon analyzer.
+*OCECgo* is a MATLAB-based software tool for the quantification of uncertainties in the calibration and data analysis of the Sunset Laboratory Model 4 semi-continuous thermal-optical organic/elemental carbon analyzer.
 
 .. toctree::
   :caption: Table of Contents
@@ -39,18 +39,18 @@ Features
 Installation
 ************
 
-*OCECgo* is available as a source distribution and a build distribution and is hosted on `GitHub <https://github.com/bradleymconrad/OCECgo>`_.  If you have a MatLab license (R2016a or newer), add the "source" directory to the MatLab path and run "OCECgo". Alternatively, double-click the "OCECgo_webinstaller" executable in the "build" directory to install a standalone version of the software on your computer.
+*OCECgo* is available as a source distribution and a build distribution and is hosted on `GitHub <https://github.com/bradleymconrad/OCECgo>`_.  If you have a MATLAB license (R2016a or newer), add the "source" directory to the MATLAB path and run "OCECgo". Alternatively, double-click the "OCECgo_webinstaller" executable in the "build" directory to install a standalone version of the software on your computer.
 
 To clone the *OCECgo* repository, see GitHub's `instructions <https://help.github.com/en/articles/cloning-a-repository>`_.
 
 .. note::
 
-  When booting the software, the landing screen may disappear and it may seem as though booting has stalled. Be patient at this point; the MatLab runtime is being loaded and *OCECgo* will initialize shortly after.
+  When booting the software, the landing screen may disappear and it may seem as though booting has stalled. Be patient at this point; the MATLAB runtime is being loaded and *OCECgo* will initialize shortly after.
 
 Requirements
 ============
 
-*OCECgo* was originally developed and has been tested in MatLab R2016a and R2018b, and uses the *signal_toolbox* and *statistics_toolbox*.
+*OCECgo* was originally developed and has been tested in MATLAB R2016a and R2018b, and uses the *signal_toolbox* and *statistics_toolbox*.
 
 If you encounter issues during installation or when using *OCECgo*, please contact the author.
 

@@ -15,5 +15,5 @@ codegen/
 _build
 
 # Sphinx make file
-make.bat
-MakeFile
+# make.bat
+# MakeFile
