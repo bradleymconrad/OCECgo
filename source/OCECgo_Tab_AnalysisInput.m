@@ -548,9 +548,10 @@ switch get(get(findobj(allchild(h), 'tag', 'Dat_Split_Proc'), 'selectedobject'),
         tempdat = h.UserData.Dat;
         tempdat.Split_Ctr = str2double(get(findobj(allchild(h), 'tag', 'Dat_Split_ctr'), 'string'));
         tempdat.Split_Wid = str2double(get(findobj(allchild(h), 'tag', 'Dat_Split_wid'), 'string'));
+        tempdat.Split_Att = str2double(get(findobj(allchild(h), 'tag', 'Dat_Split_Ao'), 'string'));
         
         % Get initial and decline
-        tempdat = Sub_Manual_Selection(tempdat);
+        % tempdat = Sub_Manual_Selection(tempdat);
         
         % Ensure validity of attenuation data
         if tempdat.Split_Del > 25
