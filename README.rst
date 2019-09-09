@@ -1,6 +1,8 @@
 .. image:: https://readthedocs.org/projects/ocecgo/badge/?version=latest
   :target: https://ocecgo.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
+.. image:: https://zenodo.org/badge/183777545.svg
+  :target: https://zenodo.org/badge/latestdoi/183777545
 
 #######################################################
 OCECgo: A MATLAB Tool for the Sunset Model 4 Instrument
