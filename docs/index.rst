@@ -23,9 +23,9 @@ OCECgo: A MATLAB Tool for the Sunset Model 4 Instrument
 Citation and Use
 ****************
 
-*OCECgo* is described in an article submitted to the `Journal of Visualized Experiments <http://www.jove.com>`_ and is being shared free of charge under the :ref:`MIT license <AnchorToLicense>`.  When using the software for analysis of data in published work, it is requested that users cite/acknowledge the following:
+*OCECgo* is described in an article submitted to the Journal of Visualized Experiments and is being shared free of charge under the :ref:`MIT license <AnchorToLicense>`.  When using the software for analysis of data in published work, it is requested that users cite/acknowledge the following:
 
-  Conrad, B.M. & Johnson, M.R., Calibration Protocol and Software for Split Point Analysis and Uncertainty Quantification of Thermal-Optical Organic / Elemental Carbon Measurements, **J. Vis. Exp.** (2019), *in-press*.
+  Conrad, B.M. & Johnson, M.R. (2019), Calibration protocol and software for split point analysis and uncertainty quantification of thermal-optical organic/elemental carbon measurements, **J. Vis. Exp.**, 151:e59742 (doi: `10.3791/59742 <https://doi.org/10.3791/59742>`_)
 
 ********
 Features

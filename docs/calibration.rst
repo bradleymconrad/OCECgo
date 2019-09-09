@@ -36,53 +36,61 @@ Step-by-step instructions for calibration data input to *OCECgo* are sourced fro
 
 .. Note::
 
-  The OCECgo software tool employs mouseover utilities to aid the user with the input of data and selection of analysis parameters.  Further information, including default and permissible ranges for user-editable fields are listed in the tool’s online documentation.
+  The OCECgo software tool exploits mouseover utilities to aid the user with the input of data and selection of analysis parameters. Further information, including default and permissible ranges for user-editable fields are listed in the tool’s online documentation.
 
-1.  Load the software tool (OCECgo) and click to migrate to the “Calibration Tool” tab.
+1.  Load the software tool (OCECgo) and click to migrate to the Calibration Tool tab.
 
   .. :
 
-2.  Input calibration data.  In section (1) of the Graphical User Interface (GUI), input calibration data: nominal volume of the applied sucrose solution, instrument-reported integrated NDIR signal corresponding to total carbon (“total area”), instrument-reported integrated NDIR signal during the CH4-loop (“calibration area”), and a Boolean to indicate whether specific points should be used in calibration (“1” for yes; “0” for no).  Repeat for each data point, adding and deleting rows to the table, as necessary, by clicking the “+ Row” and “- Row” buttons.
+2.  Input calibration data. In section (1) of the graphical user interface (GUI), input calibration data: nominal volume of the applied sucrose solution, instrument-reported integrated NDIR signal corresponding to total carbon (“total area”), instrument-reported integrated NDIR signal during the CH4-loop (“calibration area”), and a Boolean to indicate whether specific points should be used in calibration (“1” for yes; “0” for no). Repeat for each data point, adding and deleting rows to the table, as necessary, by clicking the “+ Row” and “- Row” buttons.
 
     .. Note::
 
-      The user can alternatively click the “Import Calibration” button to upload previous calibration data and inputs to the software tool.  If this option is exercised, go to step 4.4 to re-create plots in GUI section (3) or go directly to step 6 to analyze instrument data.
+      The user can alternatively click the Import Calibration button to upload previous calibration data and inputs to the software tool. If this option is exercised, go to step 4.4 to re-create plots in GUI section (3) or go directly to section 6 to analyze instrument data.
 
 3.  Define uncertainty data for use in the Monte Carlo analysis.
 
-  3.1.  In GUI section (2)(a), input data pertaining to the aqueous sucrose solution.  Input masses of sucrose and DDi water measured during step 1.1 and the absolute 2σ bias of the scale [g] used to measure DDi and sucrose masses − absolute bias is equivalent to the scale’s reported accuracy.  Input the nominal minimum purity of sucrose [%m/m] listed on the sucrose vessel’s label and insert the range of ambient temperatures [°C] observed during the acquisition of calibration data.
+  3.1.  In GUI section (2)(a), input data pertaining to the aqueous sucrose solution. Input masses of sucrose and DDi water measured during step 1.1 and the absolute 2σ bias of the scale [g] used to measure DDi and sucrose masses — absolute bias is equivalent to the scale’s reported accuracy. Input the nominal minimum purity of sucrose [%m/m] listed on the sucrose vessel’s label and insert the range of ambient temperatures [°C] observed during the acquisition of calibration data.
 
       .. Note::
 
-        2σ corresponds to two times the standard deviation, which in the context of a Normal (Gaussian) distribution is a conservative estimate of the 95% confidence interval.
+        2σ corresponds to two times the standard deviation, which in the context of a normal (Gaussian) distribution is a conservative estimate of the 95% confidence interval (CI).
 
-  3.2.  In section (2)(b), provide data pertaining to pipette uncertainty.  Input relative 2σ equipment-reported accuracy (bias error), equipment reported repeatability (precision error), precision error corresponding to intra-user repeatability, and bias error corresponding to inter-user reproducibility for aspirated volumes of 5 μL and 10 μL.
+  3.2.  In section (2)(b), provide data pertaining to pipette uncertainty. Input relative 2σ equipment-reported accuracy (bias error), equipment reported repeatability (precision error), precision error corresponding to intra-user repeatability, and bias error corresponding to interuser reproducibility for aspirated volumes of 5 μL and 10 μL.
 
       .. Note::
 
-        Default pipette uncertainties correspond to the instrument listed in the Table of Materials.  Default 2σ human-errors were estimated based on the pooled variances of studies of intra-user repeatability and inter-user reproducibility at each volume.
+        Default pipette uncertainties correspond to the instrument listed in the Table of Materials. Default 2σ human-errors were estimated based on the pooled variances of studies of intra-user repeatability and inter-user reproducibility at each volume.
 
-  3.3.  In section (2)(c), input the desired number of Monte Carlo draws for the computation of calibration metrics.  The number of Monte Carlo draws corresponds to the number of random computations of the mass calibration constant under the Monte Carlo framework.  Larger numbers yield more consistent results but take longer to process (more computational time).  The default value in OCECgo is 106 while permitted values are [102, 108].
+  3.3.  In section (2)(c), input the desired number of Monte Carlo draws for the computation of calibration metrics.
 
-4.  Run analysis.  In GUI section (3), press |go_arrow| to run the Monte Carlo analysis to process calibration data.
+      .. Note::
+
+        The number of Monte Carlo draws corresponds to the number of random computations of the mass calibration constant under the Monte Carlo framework. Larger numbers yield more accurate and consistent results, at the cost of computational time. The default value in OCECgo is :math:`10^6` while permitted values are :math:`[10^2, 10^8]`.
+
+4.  Run analysis. In GUI section (3), press |go_arrow| to run the Monte Carlo analysis to process calibration data.
 
   .. :
 
-5.  Update the instrument calibration file with the results presented in section (4).  Open the instrument’s parameter file: “SCInstrumentParameters.txt”.  Find the line of text containing the existing calibration data – this line of text includes a comment on the righthand side reading “Calibration Constant…”.  Replace the numerical data with the reported “Calibrated Carbon Mass” and “Mean Calibration (CH4-loop) Area”.  Save and close the parameter file and re-start the instrument’s software.
+5.  Update the instrument calibration file with the results presented in section (4). Open the instrument’s parameter file: SCInstrumentParameters.txt. Find the line of text containing the existing calibration data — this line of text includes a comment on the righthand side reading “Calibration Constant…”. Replace the numerical data with the reported “Calibrated Carbon Mass” and “Mean Calibration (CH4-loop) Area”. Save and close the parameter file and re-start the instrument’s software.
 
   .. :
 
 6.  Save and/or export calibration results (optional).
 
-  6.1.  Click the “Save as Default Calibration” button to store the calibration result for default use by the software.
+  6.1.  Click the Save as Default Calibration button to store the calibration result for default use by the software.
 
       .. note::
 
-        Calibration results are stored in an initialization file that, upon rebooting of the software, reloads the latest calibration.  The user is warned if the current date is more than 30 days from the latest calibration.
+        Calibration results are stored in an initialization file that, upon rebooting of the software, reloads the latest calibration. The user is warned if the current date is more than 30 days from the latest calibration.
 
-  6.2.  Click the “Export Calibration Results” button to export the calibration data.  Numerical data are exported to a pre-formatted .xlsx file and visualization of the Monte Carlo results are exported as a .png file.  This saved calibration file is useful if results are to be reanalyzed/imported at a later date using the applicable calibration.
+  6.2.  Click the Export Calibration Results button to export the calibration data.
 
-7.  Once calibration is complete, remove the quartz boat.  Following steps 2.3.1, remove the quartz insert from the instrument.  Using forceps or tweezers, remove the quartz boat used for calibration.  Following step 2.5, replace the quartz insert and close the instrument.
+      .. note::
+
+        Numerical data are exported to a pre-formatted .xlsx file and visualization of the Monte Carlo results are exported as a .png file. This saved calibration file is useful if results are to be reanalyzed/imported at a later date using the applicable calibration.
+
+7.  Once calibration is complete, remove the quartz boat. Following step 2.3.1, remove the quartz insert from the instrument. Using forceps or tweezers, remove the quartz boat used for calibration. Following step 2.5, replace the quartz insert and close the instrument
 
 .. |go_arrow| image:: images/Go_Arrow_Small.png
   :scale: 60 %
@@ -194,4 +202,4 @@ Section 2 - Uncertainty / Monte Carlo Settings
 References
 **********
 
-.. [1] Conrad, B.M. & Johnson, M.R., Calibration Protocol and Software for Split Point Analysis and Uncertainty Quantification of Thermal-Optical Organic / Elemental Carbon Measurements, **J. Vis. Exp.** (2019), *in-press*.
+.. [1] Conrad, B.M. & Johnson, M.R. (2019), Calibration protocol and software for split point analysis and uncertainty quantification of thermal-optical organic/elemental carbon measurements, **J. Vis. Exp.**, 151:e59742 (doi: `10.3791/59742 <https://doi.org/10.3791/59742>`_)

@@ -4,7 +4,7 @@ function OCECgo_TabSupport_Copyright(panel)
 
 % Insert copyright
 axes(panel, 'Units', 'pixels', 'Position', [960 5 290 327], 'xlim', [960 1250], 'ylim', [5 332], 'xtick', [], 'ytick', [], 'visible', 'off')
-str = {['Copyright ',char(169),' 2019']; 'Bradley Conrad'; 'Distributed under the MIT License'};
+str = {['Copyright ',char(169),' 2019']; 'Bradley M. Conrad'; 'Distributed under the MIT License'};
 text(gca, 1105, 10, str, 'FontName', 'Helvetica', 'FontSize', 10, 'HorizontalAlignment', 'center', 'verticalalignment', 'bottom');
 
 % Insert EERL image

@@ -14,7 +14,7 @@ Features
 
 .. features-start
 
-The accompanying submission to the `Journal of Visualized Experiments <http://www.jove.com>`_ includes the step-by-step procedure for using *OCECgo* to acquire calibration data, analyze measured data, and compute uncertainties. The *OCECgo* software includes the following features:
+The accompanying submission to the `Journal of Visualized Experiments <https://doi.org/10.3791/59742>`_ includes the step-by-step procedure for using *OCECgo* to acquire calibration data, analyze measured data, and compute uncertainties. The *OCECgo* software includes the following features:
 
   * Monte Carlo-based analysis of instrument calibration and associated uncertainties:
 
@@ -48,7 +48,9 @@ Version History
 
 .. version-start
 
-**Version 0.9**: Version submitted for review with JoVE Article.
+**Version 0.9**: Version submitted for review with JoVE article.
+
+**Version 1.0**: Version/release at time of publication of the JoVE article.
 
 .. version-end
 
@@ -58,6 +60,6 @@ Publications
 
 *OCECgo* is detailed in or referenced by the following publications:
 
-  Conrad, B.M. & Johnson, M.R., Calibration Protocol and Software for Split Point Analysis and Uncertainty Quantification of Thermal-Optical Organic / Elemental Carbon Measurements, **J. Vis. Exp.** (2019), *in-press*.
+  Conrad, B.M. & Johnson, M.R. (2019), Calibration protocol and software for split point analysis and uncertainty quantification of thermal-optical organic/elemental carbon measurements, **J. Vis. Exp.**, 151:e59742 (doi: `10.3791/59742 <https://doi.org/10.3791/59742>`_)
 
-  Conrad, B.M. & Johnson, M.R., Mass absorption cross-section of flare-generated black carbon: Variability, predictive model, and implications, **Carbon** (2019), doi: `10.1016/j.carbon.2019.04.086 <https://doi.org/10.1016/j.carbon.2019.04.086>`_ *in-press*.
+  Conrad, B.M. & Johnson, M.R. (2019), Mass absorption cross-section of flare-generated black carbon: variability, predictive model, and implications, **Carbon**, 149:760-771 (doi: `10.1016/j.carbon.2019.04.086 <https://doi.org/10.1016/j.carbon.2019.04.086>`_)

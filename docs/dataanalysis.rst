@@ -43,7 +43,6 @@ The software exports:
 
   * A .png file displaying the analysis thermogram, AVEC [1]_ plot, and visualization of the Monte Carlo results.
 
-
 *******
 Example
 *******
@@ -68,29 +67,29 @@ Step-by-step instructions for using the OCECgo GUI to analyze data are sourced f
 
 .. Note::
 
-  the OCECgo software tool exploits mouseover utilities to aid the user with the input of data and selection of analysis parameters.  Further information, including default and permissible ranges for user-editable fields are listed in the tool’s online documentation.
+  The OCECgo software tool exploits mouseover utilities to aid the user with the input of data and selection of analysis parameters. Further information, including default and permissible ranges for user-editable fields are listed in the tool’s online documentation.
 
-1.  Load the software tool (OCECgo) and click to migrate to the “Data Analysis – Inputs” tab.
+1.  Load the software tool (OCECgo) and click to migrate to the Data Analysis – Inputs tab.
 
   .. :
 
-2.  Load time-resolved instrument data − GUI section (1).
+2.  Load time-resolved instrument data — GUI section (1).
 
-  2.1.  In sub-section (a), click the “Browse…” button and, in the file selection dialog, select the .txt results file defined in step 5.3.1.  In sub-section (b), review the “Sample IDs” (as defined in step 5.3.1), and click to select the analysis of interest.  In sub-section (c), review the analysis metadata, particularly the analysis’ “Sample Start” timestamp.
+  2.1.  In sub-section (a), click the Browse… button and, in the file selection dialog, select the .txt results file defined in step 5.3.1. In sub-section (b), review the Sample IDs (as defined in step 5.3.1), and click to select the analysis of interest. In sub-section (c), review the analysis metadata, particularly the analysis’ Sample Start timestamp.
 
-3.  Define data-processing options − GUI section (2).
+3.  Define data-processing options — GUI section (2).
 
   3.1.  In sub-section (a), select the desired laser correction procedure: a quadratic- or linear-dependence on oven temperature.
 
       .. Note::
 
-        In the experience of the authors’, the laser correction procedure typically has a negligible effect − as such, the quadratic correction is recommended and is loaded as the default value.
+        In the experience of the authors, the laser correction procedure typically has a negligible effect ― as such, the quadratic correction is recommended and is loaded as the default value.
 
-  3.2.  In sub-section (b), select the desired NDIR correction procedure: correction via a “convex hull” to the raw NDIR data or a linear correction using the instrument-reported NDIR areas (“From results file”).
+  3.2.  In sub-section (b), select the desired NDIR correction procedure: correction via a convex hull to the raw NDIR data or a linear correction using the instrument-reported NDIR areas (From results file).
 
       .. Note::
 
-        The novel convex hull technique (briefly described in the software’s online documentation) corrects the NDIR signal by fitting a convex hull as a lower-bound to the NDIR time series; this technique allows for a non-linear (piecewise) correction to the NDIR signal.  In the experience of the authors’, linear correction of the NDIR detector can, in some circumstances, yield non-physical results − as such, the “Convex Hull” procedure is recommended and is loaded as the default value.
+        The novel convex hull technique (briefly described in the software’s online documentation) corrects the NDIR signal by fitting a convex hull as a lower-bound to the NDIR time series; this technique allows for a non-linear (piecewise) correction to the NDIR signal. In the experience of the authors, linear correction of the NDIR detector can, in some circumstances, yield non-physical results ― as such, the “Convex Hull” procedure is recommended and is loaded as the default value.
 
   3.3.  In sub-section (c), if desired, adjust the parameters of the generalized t-distribution reported for the mass calibration constant (calculated in step 4.4) and the estimated calibration repeatability error.
 
@@ -102,11 +101,11 @@ Step-by-step instructions for using the OCECgo GUI to analyze data are sourced f
 
       .. Note::
 
-        If the “From results file” button is selected (step 6.3.2), in the file selection dialog, select the .xlsx results file created by the instrument.
+        If the From results file button is selected (step 6.3.2), in the file selection dialog, select the .xlsx results file created by the instrument.
 
-4.  Define the split point determination procedure − GUI section (3) and (4).
+4.  Define the split point determination procedure — GUI section (3) and (4).
 
-  4.1.  In sub-section (3)(a), select the desired procedure to calculate the split point and associated uncertainty: the novel “Attenuation decline” procedure described in the Introduction, a manually-defined split point and uncertainty (“Manual selection”), or the default TOT procedure of the manufacturer (“Manufacturer”).
+  4.1.  In sub-section (3)(a), select the desired procedure to calculate the split point and associated uncertainty: the novel “Attenuation decline” procedure described in the introduction section, a manually-defined split point and uncertainty (“Manual selection”), or the default TOT procedure of the manufacturer (“Manufacturer”).
 
       .. Note::
 
@@ -116,35 +115,45 @@ Step-by-step instructions for using the OCECgo GUI to analyze data are sourced f
 
       .. Note::
 
-        The user inputs the initial laser attenuation and a threshold of attenuation decline for the “Attenuation decline” procedure and inputs the split mean and split uncertainty for the “Manual selection” procedure.  Initial laser attenuation is not used in the “Manual selection” procedure but can be tuned to support the manual selection of the split point.
+        The user inputs the initial laser attenuation and a threshold of attenuation decline for the “Attenuation decline” procedure and inputs the split mean and split uncertainty for the “Manual selection” procedure. Initial laser attenuation is not used in the “Manual selection” procedure but can be tuned to support the manual selection of the split point.
 
-  4.3.  In section (4), review the accuracy and uncertainty of the split point.  Leveraging the AVEC plot, repeat steps 6.4.1 and 6.4.2 as required, until a satisfactory split point and reasonable split point uncertainty are achieved.  Use the zoom in ( ), zoom out ( ), and pan ( ) utilities as required to manipulate the AVEC plot and support the selection of the split point and its uncertainty.
+  4.3.  In section (4), review the accuracy and uncertainty of the split point. Leveraging the AVEC plot, repeat steps 6.4.1 and 6.4.2 as required, until a satisfactory split point and reasonable split point uncertainty are achieved. Use the zoom in (|zoom_in|), zoom out (|zoom_out|), and pan (|pan|) utilities as required to manipulate the AVEC plot and support the selection of the split point and its uncertainty.
 
-5.  Run Monte Carlo analysis − GUI section (5).
+5.  Run Monte Carlo analysis — GUI section (5).
 
   5.1.  In sub-section (a), insert the estimated precision of the instrument as a whole.
 
       .. Note::
 
-        Instrument precision (repeatability) in units of μg.  The default value in OCECgo (0.031 μg) is based on estimates by the authors via replicate blank analyses.
+        Instrument precision (repeatability) in units of µg. The default value in OCECgo (0.031 μg) is based on estimates by the authors via replicate blank analyses.
 
   5.2.  In sub-section (b), insert the desired number of Monte Carlo draws for the computation of carbon masses.
 
       .. Note::
 
-        The number of Monte Carlo draws corresponds to the number of random computations of the carbon masses under the Monte Carlo framework.  Larger numbers yield more accurate and consistent results, at the cost of computational time.  The default value in OCECgo is 106 while permitted values are [102, 108].
+        The number of Monte Carlo draws corresponds to the number of random computations of the carbon masses under the Monte Carlo framework. Larger numbers yield more accurate and consistent results, at the cost of computational time. The default value in OCECgo is :math:`10^6` while permitted values are :math:`[10^2, 10^8]`.
 
-  5.3.  In sub-section (c), press   to run the Monte Carlo analysis to compute carbon masses and associated uncertainties.
+  5.3.  In sub-section (c), press |go_arrow| to run the Monte Carlo analysis to compute carbon masses and associated uncertainties.
 
       .. Note::
 
-        Following execution of the Monte Carlo analysis, the user is migrated to the “Data Analysis Tool – Results” tab.
+        Following execution of the Monte Carlo analysis, the user is migrated to the Data Analysis Tool – Results tab.
 
-6.  Review results.  The “Data Analysis Tool – Results” tab reports statistics of the measured OC, EC, and total carbon (TC); histograms of the Monte Carlo results; and the best-fitting posterior probability distribution of carbon masses for use in subsequent Monte Carlo procedures, chosen by the Akaike Information Criterion [3]_.
+6.  Review results. The Data Analysis Tool – Results tab reports statistics of the measured OC, EC, and total carbon (TC); histograms of the Monte Carlo results; and the best-fitting posterior probability distribution of carbon masses for use in subsequent Monte Carlo procedures, chosen by the Akaike Information Criterion [3]_.
 
-  6.1.  Press the “Export Analysis Results” button to export the Monte Carlo results.  Numerical data are exported to a pre-formatted .xlsx file and visualization of the Monte Carlo results are exported as a .png file.
+  6.1.  Press the Export Analysis Results button to export the Monte Carlo results.
+
+      .. Note::
+
+        Numerical data are exported to a pre-formatted .xlsx file and visualization of the Monte Carlo results are exported as a .png file.
 
 .. |go_arrow| image:: images/Go_Arrow_Small.png
+  :scale: 60 %
+.. |zoom_in| image:: images/Zoom_in.png
+  :scale: 60 %
+.. |zoom_out| image:: images/Zoom_out.png
+  :scale: 60 %
+.. |pan| image:: images/Pan.png
   :scale: 60 %
 
 ************************
@@ -229,6 +238,6 @@ Section 4 - Analysis
 References
 **********
 
-.. [1] Nicolosi, E.M.G., Quincey, P., Font, A., & Fuller, G.W., Light attenuation versus evolved carbon (AVEC) - A new way to look at elemental and organic carbon analysis. **Atmos. Env.**. 175, 145-153, doi: `10.1016/j.atmosenv.2017.12.001 <http://doi.org/10.1016/j.atmosenv.2017.12.011>`_ (2018).
-.. [2] Conrad, B.M. & Johnson, M.R., Calibration Protocol and Software for Split Point Analysis and Uncertainty Quantification of Thermal-Optical Organic / Elemental Carbon Measurements, **J. Vis. Exp.** (2019), *in-press*.
-.. [3] Akaike, H., A new look at the statistical model identification. **IEEE Trans. on Autom. Cont.**. 19(6), 716-723, doi: `10.1109/TAC.1974.1100705 <http://doi.org/10.1109/TAC.1974.1100705>`_ (1974).
+.. [1] Nicolosi, E.M.G., Quincey, P., Font, A., & Fuller, G.W. (2018), Light attenuation versus evolved carbon (AVEC) - A new way to look at elemental and organic carbon analysis. **Atmos. Env.**, 175:145-153 (doi: `10.1016/j.atmosenv.2017.12.001 <http://doi.org/10.1016/j.atmosenv.2017.12.011>`_).
+.. [2] Conrad, B.M. & Johnson, M.R. (2019), Calibration protocol and software for split point analysis and uncertainty quantification of thermal-optical organic/elemental carbon measurements, **J. Vis. Exp.**, 151:e59742 (doi: `10.3791/59742 <https://doi.org/10.3791/59742>`_)
+.. [3] Akaike, H. (1974), A new look at the statistical model identification. **IEEE Trans. on Autom. Cont.**, 19(6):716-723 (doi: `10.1109/TAC.1974.1100705 <http://doi.org/10.1109/TAC.1974.1100705>`_)

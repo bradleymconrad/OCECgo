@@ -350,7 +350,7 @@ Rayleigh
 References
 **********
 
-.. [1] Conrad, B.M. & Johnson, M.R., Calibration Protocol and Software for Split Point Analysis and Uncertainty Quantification of Thermal-Optical Organic / Elemental Carbon Measurements, **J. Vis. Exp.** (2019), *in-press*.
-.. [2] Darros-Barbosa, R., Balaban, M., Teixeira, A., Temperature and concentration dependence of density of model liquid foods.  **Int. J. Food Prop.**. 6(2), 195-214, doi: `10.1081/JFP-120017815 <https://doi.org/10.1081/JFP-120017815>`_ (2003).
-.. [3] Zheng, G.J., Cheng Y., He K.B., Duan F.K., & Ma Y.L., A newly identified discrepancy of the sunset semi-continuous carbon analyzer. **Atmos. Meas. Tech.**. 7, 1969-1977, doi: `10.5194/amt-7-1969-2014 <https://doi.org/10.5194/amt-7-1969-2014>`_ (2014).
-.. [4] Akaike, H., A new look at the statistical model identification. **IEEE Trans. on Autom. Cont.**. 19(6), 716-723, doi: `10.1109/TAC.1974.1100705 <http://doi.org/10.1109/TAC.1974.1100705>`_ (1974).
+.. [1] Conrad, B.M. & Johnson, M.R. (2019), Calibration protocol and software for split point analysis and uncertainty quantification of thermal-optical organic/elemental carbon measurements, **J. Vis. Exp.**, 151:e59742 (doi: `10.3791/59742 <https://doi.org/10.3791/59742>`_)
+.. [2] Darros-Barbosa, R., Balaban, M., Teixeira, A. (2003), Temperature and concentration dependence of density of model liquid foods.  **Int. J. Food Prop.**, 6(2):195-214 (doi: `10.1081/JFP-120017815 <https://doi.org/10.1081/JFP-120017815>`_
+.. [3] Zheng, G.J., Cheng Y., He K.B., Duan F.K., & Ma Y.L. (2014), A newly identified discrepancy of the sunset semi-continuous carbon analyzer. **Atmos. Meas. Tech.**, 7:1969-1977 (doi: `10.5194/amt-7-1969-2014 <https://doi.org/10.5194/amt-7-1969-2014>`_)
+.. [4] Akaike, H. (1974), A new look at the statistical model identification. **IEEE Trans. on Autom. Cont.**, 19(6):716-723 (doi: `10.1109/TAC.1974.1100705 <http://doi.org/10.1109/TAC.1974.1100705>`_)
