@@ -1180,7 +1180,7 @@ smo = smooth(att, 10); % Smoothed over 10-second window
 crit = max(smo(1 : 70)); % Maximum over first 70 seconds
 
 % Find split point index in AVEC data
-idx = find(att <= crit, 1, 'last') + 1;
+idx = min(length(att), find(att <= crit, 1, 'last') + 1);
 idx = idx - 1 + (crit - att(idx - 1)) / (att(idx) - att(idx - 1));
 idx = min(idx, size(Dat.AnalysisInfo.data{Dat.TagIndex}.AVEC, 1));
 
